@@ -3,16 +3,18 @@ WebApplication app = WebApplication.Create();
 app.Urls.Add("http://localhost:3000");
 app.Urls.Add("http://*:3000");
 
-joe swanson = new joe();
-swanson.Name = "Joe";
-swanson.Appearance = "Crippled";
-swanson.Strength = 9999;
+List<Supervillain> villains = new();
+
+Supervillain penguin = new Supervillain();
+penguin.Name = "Penguin";
+penguin.Appearance = "Short";
+penguin.Strength = 50;
 
 app.MapGet("/", Answer);
 
-app.MapGet("/joe/", () => 
+app.MapGet("/Supervillain/", () => 
 {
-    return swanson;
+    return penguin;
 });
 
 app.Run();

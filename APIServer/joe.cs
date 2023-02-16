@@ -1,6 +1,6 @@
 using System;
 
-public class joe
+public class Supervillain
 {
     public string Name { get; set; }
     public string Appearance { get; set; }
