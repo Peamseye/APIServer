@@ -28,7 +28,7 @@ app.MapGet("/superhero/{num}", (int num) =>
 
 app.MapPost("/supervillain/", () => 
 {
-    Console.WriteLine("POST!"); 
+    Console.WriteLine("SUCCESS!"); 
 });
 
 
