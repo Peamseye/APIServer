@@ -16,6 +16,11 @@ app.MapGet("/supervillain/", () =>
     return villains;
 });
 
+app.MapGet("/superhero/{num}", (int num) =>
+{
+    return num * 2;
+});
+
 app.Run();
 
 static string Answer() 
