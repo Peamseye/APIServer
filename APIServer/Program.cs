@@ -26,6 +26,13 @@ app.MapGet("/superhero/{num}", (int num) =>
     return num * 2;
 });
 
+app.MapPost("/supervillain/", () => 
+{
+    Console.WriteLine("POST!"); 
+});
+
+
+
 app.Run();
 
 static string Answer() 
