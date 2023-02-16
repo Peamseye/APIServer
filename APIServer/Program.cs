@@ -11,9 +11,14 @@ villains.Add(new() { Name = "Two-Face", Appearance = "Split personality & looks"
 
 app.MapGet("/", Answer);
 
-app.MapGet("/supervillain/", () => 
+app.MapGet("/supervillain/{num}", (int num) => 
 {
-    return villains;
+    if (num >= 0 && num < villains.Count)
+    {
+        return Results.Ok(villains[num]);
+    }
+    
+    return Results.NotFound();
 });
 
 app.MapGet("/superhero/{num}", (int num) =>
